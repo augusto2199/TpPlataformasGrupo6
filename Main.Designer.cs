@@ -106,6 +106,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.button16 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -138,7 +139,7 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(141, 15);
+            this.button12.Location = new System.Drawing.Point(246, 15);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(105, 23);
             this.button12.TabIndex = 4;
@@ -826,7 +827,7 @@
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(369, 27);
+            this.button16.Location = new System.Drawing.Point(1117, 19);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(75, 23);
             this.button16.TabIndex = 5;
@@ -834,11 +835,22 @@
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(122, 19);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(44, 15);
+            this.label15.TabIndex = 6;
+            this.label15.Text = "label15";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1231, 481);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button12);
@@ -945,5 +957,6 @@
         private DataGridViewTextBoxColumn Column14;
         private DataGridViewTextBoxColumn Column15;
         private DataGridViewTextBoxColumn Column16;
+        private Label label15;
     }
 }

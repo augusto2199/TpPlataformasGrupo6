@@ -4,22 +4,20 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 
- namespace ConsoleApp1
-{    
-        public class BaseDeDatos
+namespace InterfazTP
+{
+    public class BaseDeDatos
+    {
+        private string connectionString;
+        DateTime thisDay = DateTime.Today;
+
+        public BaseDeDatos()
         {
-            private string connectionString;
-            DateTime thisDay = DateTime.Today;
+            this.connectionString = @"Data Source=DESKTOP-VELRJ6B\SQLEXPRESS;Integrated Security=True";
 
-            public BaseDeDatos()
-            {
-                this.connectionString = @"Data Source=GRAZIANO\SQLEXPRESS;Initial Catalog=Banco;Integrated Security=True";
+        }
 
-            }
-
-
-         
-            public int crearUsuario(int Dni, string Nombre, string Apellido, string Mail, string Password, bool admin, bool bloqueado)
+        public int crearUsuario(int Dni, string Nombre, string Apellido, string Mail, string Password, bool admin, bool bloqueado)
         {
             //primero me aseguro que lo pueda agregar a la base
             int resultadoQuery;
@@ -28,83 +26,85 @@ using System.Data.SqlClient;
             string queryString = "INSERT INTO usuario ([dni],[nombre],[apellido],[mail],[contrasenia],[intentos_fallidos],[bloqueado],[admin]) VALUES (@dni,@nombre,@apellido,@mail,@password,@fallidos,@bloqueado,@admin);";
             using SqlConnection connection =
                 new SqlConnection(connectionString);
-            SqlCommand command = new SqlCommand(queryString, connection);
-            command.Parameters.Add(new SqlParameter("@dni", SqlDbType.Int));
-            command.Parameters.Add(new SqlParameter("@nombre", SqlDbType.NVarChar));
-            command.Parameters.Add(new SqlParameter("@apellido", SqlDbType.NVarChar));
-            command.Parameters.Add(new SqlParameter("@mail", SqlDbType.NVarChar));
-            command.Parameters.Add(new SqlParameter("@password", SqlDbType.NVarChar));
-            command.Parameters.Add(new SqlParameter("@admin", SqlDbType.Bit));
-            command.Parameters.Add(new SqlParameter("@fallidos", SqlDbType.Bit));
-            command.Parameters.Add(new SqlParameter("@bloqueado", SqlDbType.Bit));
-            command.Parameters["@dni"].Value = Dni;
-            command.Parameters["@nombre"].Value = Nombre;
-            command.Parameters["@apellido"].Value = Apellido;
-            command.Parameters["@mail"].Value = Mail;
-            command.Parameters["@password"].Value = Password;
-            command.Parameters["@admin"].Value = admin;
-            command.Parameters["@fallidos"].Value = 0;
-            command.Parameters["@bloqueado"].Value = bloqueado;
-            try
             {
-                connection.Open();
-                //esta consulta NO espera un resultado para leer, es del tipo NON Query
-                resultadoQuery = command.ExecuteNonQuery();
+                SqlCommand command = new SqlCommand(queryString, connection);
+                command.Parameters.Add(new SqlParameter("@dni", SqlDbType.Int));
+                command.Parameters.Add(new SqlParameter("@nombre", SqlDbType.NVarChar));
+                command.Parameters.Add(new SqlParameter("@apellido", SqlDbType.NVarChar));
+                command.Parameters.Add(new SqlParameter("@mail", SqlDbType.NVarChar));
+                command.Parameters.Add(new SqlParameter("@password", SqlDbType.NVarChar));
+                command.Parameters.Add(new SqlParameter("@admin", SqlDbType.Bit));
+                command.Parameters.Add(new SqlParameter("@fallidos", SqlDbType.Bit));
+                command.Parameters.Add(new SqlParameter("@bloqueado", SqlDbType.Bit));
+                command.Parameters["@dni"].Value = Dni;
+                command.Parameters["@nombre"].Value = Nombre;
+                command.Parameters["@apellido"].Value = Apellido;
+                command.Parameters["@mail"].Value = Mail;
+                command.Parameters["@password"].Value = Password;
+                command.Parameters["@admin"].Value = admin;
+                command.Parameters["@fallidos"].Value = 0;
+                command.Parameters["@bloqueado"].Value = bloqueado;
+                try
+                {
+                    connection.Open();
+                    //esta consulta NO espera un resultado para leer, es del tipo NON Query
+                    resultadoQuery = command.ExecuteNonQuery();
 
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    return -1;
+                }
+                return idNuevoUsuario;
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return -1;
-            }
-            return idNuevoUsuario;
         }
 
-            public int crearCaja( int caja_usuario_fk)
-            {   
-                //primero me aseguro que lo pueda agregar a la base
-                int resultadoQuery;
-                int idNuevoUsuario = -1;
-                string queryString = "INSERT INTO [dbo].[caja_de_ahorro]([cbu],[saldo]) VALUES(@cbu,@saldo); ";
-                using (SqlConnection connection =
-                    new SqlConnection(this.connectionString))
-                {
-                    SqlCommand command = new SqlCommand(queryString, connection);
-                    command.Parameters.Add(new SqlParameter("@cbu", SqlDbType.Int));
-                    command.Parameters.Add(new SqlParameter("@saldo", SqlDbType.Float));
-
-
-                     command.Parameters["@cbu"].Value = 12345678;//verr
-                     command.Parameters["@saldo"].Value = 0;
-                
-               
-                    try
-                    {
-                        connection.Open();
-                        //esta consulta NO espera un resultado para leer, es del tipo NON Query
-                        resultadoQuery = command.ExecuteNonQuery();
-
-                        
-                        //VincularCuentas();
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-                        Console.WriteLine(ex.Message);
-                        return -1;
-                    }
-                        return idNuevoUsuario;
-                }
-            }
-
-            public static void VincularCuentas()
+        public int crearCaja(int caja_usuario_fk)
+        {
+            //primero me aseguro que lo pueda agregar a la base
+            int resultadoQuery;
+            int idNuevoUsuario = -1;
+            string queryString = "INSERT INTO [dbo].[caja_de_ahorro]([cbu],[saldo]) VALUES(@cbu,@saldo); ";
+            using (SqlConnection connection =
+                new SqlConnection(this.connectionString))
             {
-                //hay que unir con la cuenta que esta "iniciado sesion" con la" Caja_Usario" y la cuenta de "caja de ahorro"
+                SqlCommand command = new SqlCommand(queryString, connection);
+                command.Parameters.Add(new SqlParameter("@cbu", SqlDbType.Int));
+                command.Parameters.Add(new SqlParameter("@saldo", SqlDbType.Float));
 
 
+                command.Parameters["@cbu"].Value = 12345678;//verr
+                command.Parameters["@saldo"].Value = 0;
+
+
+                try
+                {
+                    connection.Open();
+                    //esta consulta NO espera un resultado para leer, es del tipo NON Query
+                    resultadoQuery = command.ExecuteNonQuery();
+
+
+                    //VincularCuentas();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+                    Console.WriteLine(ex.Message);
+                    return -1;
+                }
+                return idNuevoUsuario;
             }
+        }
 
-            public int crearTarjeta()
+        public static void VincularCuentas()
+        {
+            //hay que unir con la cuenta que esta "iniciado sesion" con la" Caja_Usario" y la cuenta de "caja de ahorro"
+
+
+        }
+
+        public int crearTarjeta()
         {
             //primero me aseguro que lo pueda agregar a la base
             int resultadoQuery;
@@ -156,9 +156,8 @@ using System.Data.SqlClient;
             }
         }
 
-
-            public int crearPlazo()
-            {
+        public int crearPlazo()
+        {
             //primero me aseguro que lo pueda agregar a la base
             int resultadoQuery;
             int idNuevoUsuario = -1;
@@ -177,7 +176,7 @@ using System.Data.SqlClient;
 
                 command.Parameters["@monto"].Value = 12345678;//hay que ver como ejecutar
                 command.Parameters["@tasa"].Value = 3;//tiene que ser siempre el mismo
-                command.Parameters["@fecha_ini"].Value = this.thisDay.ToString(); 
+                command.Parameters["@fecha_ini"].Value = this.thisDay.ToString();
                 command.Parameters["@pagado"].Value = false;//siempre en false
                 command.Parameters["@usuario_id"].Value = 0;
                 //una vez creado deberiamos tener el id y vincular con el usuario iniciado 
@@ -207,9 +206,9 @@ using System.Data.SqlClient;
                 }
                 return idNuevoUsuario;
             }
-            }
+        }
 
-            public int crearPago()
+        public int crearPago()
         {
             //primero me aseguro que lo pueda agregar a la base
             int resultadoQuery;
@@ -261,8 +260,7 @@ using System.Data.SqlClient;
             }
         }
 
-
-            public int crearMovimiento()
+        public int crearMovimiento()
         {
             //primero me aseguro que lo pueda agregar a la base
             int resultadoQuery;
@@ -281,7 +279,7 @@ using System.Data.SqlClient;
 
 
                 command.Parameters["@monto"].Value = 12345678;//hay que ver como ejecutar y preguntar si tiene plata jeje
-                command.Parameters["@fecha"].Value = this.thisDay.ToString() ; 
+                command.Parameters["@fecha"].Value = this.thisDay.ToString();
                 command.Parameters["@detalle"].Value = "Que onda";
                 command.Parameters["@caja_id"].Value = 12345678;
                 //una vez creado deberiamos tener el id y vincular con el usuario iniciado 
@@ -313,28 +311,27 @@ using System.Data.SqlClient;
             }
         }
 
+        public bool modificarSaldoDeCaja(float monto, int id)
+        {
 
-            public bool modificarSaldoDeCaja(float monto, int id)
+            string connectionString = this.connectionString;
+            string queryString = "UPDATE [dbo].[caja_de_ahorro] SET [saldo] = @saldo WHERE caja_id=@id;";
+            using (SqlConnection connection =
+                 new SqlConnection(connectionString))
             {
+                SqlCommand command = new SqlCommand(queryString, connection);
+                command.Parameters.Add(new SqlParameter("@id", SqlDbType.Int));
+                command.Parameters.Add(new SqlParameter("@saldo", SqlDbType.Float));
 
-                string connectionString = this.connectionString;
-                string queryString = "UPDATE [dbo].[caja_de_ahorro] SET [saldo] = @saldo WHERE caja_id=@id;";
-                using (SqlConnection connection =
-                     new SqlConnection(connectionString))
-                {
-                    SqlCommand command = new SqlCommand(queryString, connection);
-                    command.Parameters.Add(new SqlParameter("@id", SqlDbType.Int));
-                    command.Parameters.Add(new SqlParameter("@saldo", SqlDbType.Float));
-
-                    command.Parameters["@id"].Value = id;
-                    command.Parameters["@saldo"].Value = monto;
+                command.Parameters["@id"].Value = id;
+                command.Parameters["@saldo"].Value = monto;
 
                 try
                 {
                     connection.Open();
                     //esta consulta NO espera un resultado para leer, es del tipo NON Query
-                    
-                     command.ExecuteNonQuery();
+
+                    command.ExecuteNonQuery();
                     return true;
                 }
                 catch (Exception ex)
@@ -346,7 +343,7 @@ using System.Data.SqlClient;
 
         }
 
-             public bool modificarConsumoDeTarjeta(float monto, int tarjeta_id)
+        public bool modificarConsumoDeTarjeta(float monto, int tarjeta_id)
         {
 
             string connectionString = this.connectionString;
@@ -361,7 +358,8 @@ using System.Data.SqlClient;
                 command.Parameters["@id"].Value = tarjeta_id;
                 command.Parameters["@saldo"].Value = monto;
 
-               try {
+                try
+                {
                     connection.Open();
                     //esta consulta NO espera un resultado para leer, es del tipo NON Query
                     command.ExecuteNonQuery();
@@ -376,51 +374,49 @@ using System.Data.SqlClient;
 
         }
 
+        public bool modificarfinalizarPlazoFijo(int plazo_id)
+        {
 
-             public bool modificarfinalizarPlazoFijo( int plazo_id)
-             {
+            string connectionString = this.connectionString;
+            string queryString = "UPDATE [dbo].[plazo_fijo] SET [fecha_fin] = @fecha ,[pagado] = @pago WHERE plazo_id = @id;";
 
-                string connectionString = this.connectionString;
-                string queryString = "UPDATE [dbo].[plazo_fijo] SET [fecha_fin] = @fecha ,[pagado] = @pago WHERE plazo_id = @id;";
-                
-                using (SqlConnection connection =
-                    new SqlConnection(connectionString))
+            using (SqlConnection connection =
+                new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(queryString, connection);
+                command.Parameters.Add(new SqlParameter("@id", SqlDbType.Int));
+                command.Parameters.Add(new SqlParameter("@fecha", SqlDbType.Date));
+                command.Parameters.Add(new SqlParameter("@pago", SqlDbType.Bit));
+
+                command.Parameters["@id"].Value = plazo_id;
+                command.Parameters["@fecha"].Value = this.thisDay.ToString();
+                command.Parameters["@pago"].Value = true;
+                //deberia llamar modicar modificarSaldoDeCaja
+                try
                 {
-                    SqlCommand command = new SqlCommand(queryString, connection);
-                    command.Parameters.Add(new SqlParameter("@id", SqlDbType.Int));
-                    command.Parameters.Add(new SqlParameter("@fecha", SqlDbType.Date));
-                    command.Parameters.Add(new SqlParameter("@pago", SqlDbType.Bit));
-    
-                    command.Parameters["@id"].Value = plazo_id;
-                    command.Parameters["@fecha"].Value = this.thisDay.ToString();
-                    command.Parameters["@pago"].Value = true;
-                    //deberia llamar modicar modificarSaldoDeCaja
-                    try
-                    {
-                        connection.Open();
-                        //esta consulta NO espera un resultado para leer, es del tipo NON Query
-                        command.ExecuteNonQuery();
-                        return true;
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                        return false;
-                    }
+                    connection.Open();
+                    //esta consulta NO espera un resultado para leer, es del tipo NON Query
+                    command.ExecuteNonQuery();
+                    return true;
                 }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    return false;
+                }
+            }
 
-             }
-
-
+        }
 
         //mostrar 
+
         //cliente
         public List<Usuario> inicializarUsuarios()
         {
             List<Usuario> misUsuarios = new List<Usuario>();
 
             //Defino el string con la consulta que quiero realizar
-            string queryString = "SELECT * from dbo.Usuarios";
+            string queryString = "SELECT * from usuario";
 
             // Creo una conexión SQL con un Using, de modo que al finalizar, la conexión se cierra y se liberan recursos
             using (SqlConnection connection =
@@ -439,7 +435,7 @@ using System.Data.SqlClient;
                     //mientras haya registros/filas en mi DataReader, sigo leyendo
                     while (reader.Read())
                     {
-                        aux = new Usuario(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetBoolean(5), reader.GetBoolean(6));
+                        aux = new Usuario(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetInt32(5), reader.GetBoolean(6));
                         misUsuarios.Add(aux);
                     }
                     //En este punto ya recorrí todas las filas del resultado de la query
@@ -457,9 +453,9 @@ using System.Data.SqlClient;
             return misUsuarios;
         }
         //caja
-        public List<Usuario> mostrarCaja()
+        public List<CajaDeAhorro> mostrarCaja()
         {
-            List<Usuario> misUsuarios = new List<Usuario>();
+            List<CajaDeAhorro> misUsuarios = new List<CajaDeAhorro>();
 
             //Defino el string con la consulta que quiero realizar
             string queryString = "SELECT * from caja_de_ahorro";
@@ -477,7 +473,7 @@ using System.Data.SqlClient;
                     connection.Open();
                     //mi objecto DataReader va a obtener los resultados de la consulta, notar que a comando se le pide ExecuteReader()
                     SqlDataReader reader = command.ExecuteReader();
-                    Usuario aux;
+                    CajaDeAhorro aux;
                     //mientras haya registros/filas en mi DataReader, sigo leyendo
                     while (reader.Read())
                     {
@@ -499,12 +495,12 @@ using System.Data.SqlClient;
             return misUsuarios;
         }
         //plazo
-        public List<Usuario> mostrarCaja()
+        public List<PlazoFijo> mostrarPlazoFijo()
         {
-            List<Usuario> misUsuarios = new List<Usuario>();
+            List<PlazoFijo> misUsuarios = new List<PlazoFijo>();
 
             //Defino el string con la consulta que quiero realizar
-            string queryString = "SELECT * from movimiento";
+            string queryString = "SELECT * from plazo_fijo";
 
             // Creo una conexión SQL con un Using, de modo que al finalizar, la conexión se cierra y se liberan recursos
             using (SqlConnection connection =
@@ -519,11 +515,12 @@ using System.Data.SqlClient;
                     connection.Open();
                     //mi objecto DataReader va a obtener los resultados de la consulta, notar que a comando se le pide ExecuteReader()
                     SqlDataReader reader = command.ExecuteReader();
-                    Usuario aux;
+                    PlazoFijo aux;
                     //mientras haya registros/filas en mi DataReader, sigo leyendo
                     while (reader.Read())
                     {
-                        aux = new Movimiento(reader.GetInt32(0), reader.GetInt32(1), reader.GetFloat(2), reader.GetFloat(3), reader.GetFloat(4));
+                        // Revisar fecha
+                        //aux = new PlazoFijo(reader.GetInt32(0), reader.GetFloat(1), reader.GetDate(2), reader.GetDate(3), reader.GetFloat(4), reader.GetBoolean(5);
                         misUsuarios.Add(aux);
                     }
                     //En este punto ya recorrí todas las filas del resultado de la query
@@ -541,139 +538,132 @@ using System.Data.SqlClient;
             return misUsuarios;
         }
         //tarjeta
+        public List<TarjetaDeCredito> mostrarTarjetaDeCredito()
+        {
+            List<TarjetaDeCredito> misUsuarios = new List<TarjetaDeCredito>();
+
+            //Defino el string con la consulta que quiero realizar
+            string queryString = "SELECT * from tarjeta_de_credito";
+
+            // Creo una conexión SQL con un Using, de modo que al finalizar, la conexión se cierra y se liberan recursos
+            using (SqlConnection connection =
+                new SqlConnection(connectionString))
+            {
+                // Defino el comando a enviar al motor SQL con la consulta y la conexión
+                SqlCommand command = new SqlCommand(queryString, connection);
+
+                try
+                {
+                    //Abro la conexión
+                    connection.Open();
+                    //mi objecto DataReader va a obtener los resultados de la consulta, notar que a comando se le pide ExecuteReader()
+                    SqlDataReader reader = command.ExecuteReader();
+                    TarjetaDeCredito aux;
+                    //mientras haya registros/filas en mi DataReader, sigo leyendo
+                    while (reader.Read())
+                    {
+                        aux = new TarjetaDeCredito(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetFloat(3), reader.GetFloat(4));
+                        misUsuarios.Add(aux);
+                    }
+                    //En este punto ya recorrí todas las filas del resultado de la query
+                    reader.Close();
+
+
+
+                    //YA cargué todos los domicilios, sólo me resta vincular
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+            return misUsuarios;
+        }
         //movientos
+        public List<Movimiento> mostrarMovimiento()
+        {
+            List<Movimiento> misUsuarios = new List<Movimiento>();
+
+            //Defino el string con la consulta que quiero realizar
+            string queryString = "SELECT * from movimiento";
+
+            // Creo una conexión SQL con un Using, de modo que al finalizar, la conexión se cierra y se liberan recursos
+            using (SqlConnection connection =
+                new SqlConnection(connectionString))
+            {
+                // Defino el comando a enviar al motor SQL con la consulta y la conexión
+                SqlCommand command = new SqlCommand(queryString, connection);
+
+                try
+                {
+                    //Abro la conexión
+                    connection.Open();
+                    //mi objecto DataReader va a obtener los resultados de la consulta, notar que a comando se le pide ExecuteReader()
+                    SqlDataReader reader = command.ExecuteReader();
+                    Movimiento aux;
+                    //mientras haya registros/filas en mi DataReader, sigo leyendo
+                    while (reader.Read())
+                    {
+                        // Revisar fecha
+                        //aux = new Movimiento(reader.GetInt32(0), reader.GetString(1), reader.GetFloat(2), reader.GetDate(3));
+                        misUsuarios.Add(aux);
+                    }
+                    //En este punto ya recorrí todas las filas del resultado de la query
+                    reader.Close();
+
+
+
+                    //YA cargué todos los domicilios, sólo me resta vincular
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+            return misUsuarios;
+        }
         //pago
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        public List<Pago> mostrarPago()
+        {
+            List<Pago> misUsuarios = new List<Pago>();
+
+            //Defino el string con la consulta que quiero realizar
+            string queryString = "SELECT * from pago";
+
+            // Creo una conexión SQL con un Using, de modo que al finalizar, la conexión se cierra y se liberan recursos
+            using (SqlConnection connection =
+                new SqlConnection(connectionString))
+            {
+                // Defino el comando a enviar al motor SQL con la consulta y la conexión
+                SqlCommand command = new SqlCommand(queryString, connection);
+
+                try
+                {
+                    //Abro la conexión
+                    connection.Open();
+                    //mi objecto DataReader va a obtener los resultados de la consulta, notar que a comando se le pide ExecuteReader()
+                    SqlDataReader reader = command.ExecuteReader();
+                    Pago aux;
+                    //mientras haya registros/filas en mi DataReader, sigo leyendo
+                    while (reader.Read())
+                    {
+                        // Revisar fecha
+                        //aux = new Pago(reader.GetInt32(0), reader.GetFloat(1), reader.GetBoolean(2), reader.GetString(3));
+                        misUsuarios.Add(aux);
+                    }
+                    //En este punto ya recorrí todas las filas del resultado de la query
+                    reader.Close();
+
+
+
+                    //YA cargué todos los domicilios, sólo me resta vincular
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+            return misUsuarios;
+        }
     }
-
-
-
 }

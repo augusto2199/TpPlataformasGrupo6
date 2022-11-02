@@ -20,6 +20,8 @@ namespace InterfazTP
         public Usuario usuarioActual { get; set; }
         public int cbu = 1000;
 
+        private BaseDeDatos db;
+
         public Banco()
         {
             pagos = new List<Pago>();
@@ -28,9 +30,23 @@ namespace InterfazTP
             plazosFijos = new List<PlazoFijo>();
             caja = new List<CajaDeAhorro>();
             usuario = new List<Usuario>();
+            db = new BaseDeDatos();
+            InicializarAtributos();
         }
 
-        // Kevin
+        // Llama a todos los datos de la BD
+        private void InicializarAtributos()
+        {
+            this.usuario = db.inicializarUsuarios();
+            this.caja = db.mostrarCaja();
+            this.plazosFijos = db.mostrarPlazoFijo();
+            this.tarjetas = db.mostrarTarjetaDeCredito();
+            this.movimientos = db.mostrarMovimiento();
+            this.pagos = db.mostrarPago();
+        }
+
+        /* METODOS ABM */
+        // Registrar Usuario
         public bool AltaUsuario(string user, string password, string nombre, string apellido, string dni, string email)
         {
             if (password.Length < 8 || user.Length < 8)
@@ -47,12 +63,13 @@ namespace InterfazTP
                 nuevoUsuario.apellido = apellido;
                 nuevoUsuario.dni = dni;
                 nuevoUsuario.email = email;
+                nuevoUsuario.id = Convert.ToInt32(dni);
 
                 usuario.Add(nuevoUsuario);
                 return true;
             }
         }
-
+        // Modificar datos de Usuario
         public bool ModificarUsuario(string user, string password, string nombre, string apellido, string email)
         {
             bool result = false;
@@ -72,12 +89,24 @@ namespace InterfazTP
             }
             return result;
         }
-
-        public void EliminarUsuario()
+        // Eliminar Usuario
+        public void EliminarUsuario(int usuarioId)
         {
-            // Copiar codigo de git
+            foreach (Usuario u in this.MostrarUsuarios())
+            {
+                if(u.id == usuarioId)
+                {
+                    u.cajas.RemoveAll(c => c.id == usuarioId);
+                    u.tarjetas.RemoveAll(c => c.id == usuarioId);
+                    u.pf.RemoveAll(c => c.id == usuarioId);
+                    u.pagos.RemoveAll(c => c.id == usuarioId);                    
+                    this.usuario.Remove(u);
+                }
+            }
         }
 
+        /* METODOS CAJA DE AHORRO*/
+        // Alta caja de ahorro
         public void AltaCajaAhorro(Usuario usuarioActual)
         {
 
@@ -98,7 +127,7 @@ namespace InterfazTP
             }
 
         }
-
+        // Baja caja de ahorro
         public bool BajaCajaAhorro(int id)
         {
             if (usuarioActual != null)
@@ -118,24 +147,113 @@ namespace InterfazTP
             }
             return false;
         }
-
+        // Modificar datos de caja de ahorro
         public void ModificarCajaAhorro(int id)
         {
-            foreach (var c in usuarioActual.cajas)
-            {
-                if (c.id == id)
-                {
-                    c.id = 0;
-                    c.cbu = 0;
-                }
-                else
-                {
-                    Console.WriteLine("No tiene caja ahorro!");
-                }
-            }
+
         }
 
-        // CLAUDIO
+        // Devuelve datos necesarios para mostrar titular en forma de string(INTERFAZ)
+        public List<Usuario> MostrarDatosTitular(int numCaja)
+        {
+            List<Usuario> titulares = new List<Usuario>();
+
+            for (int i = 0; i < this.MostrarUsuarios().Count; i++)
+            {
+                foreach (CajaDeAhorro c in caja)
+                {
+                    if (c.cbu == numCaja)
+                    {
+                        if (this.MostrarUsuarios()[i].cajas.Contains(c))
+                        {
+                            titulares.Add(this.MostrarUsuarios()[i]);
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                }
+            }
+            return titulares.ToList();
+        }
+
+        // Devuelve datos necesarios para mostrar titulares disponibles para agregar(INTERFAZ)
+        public List<Usuario> MostrarTitularesDisponibles(int numCaja)
+        {
+            List<Usuario> titulares = new List<Usuario>();
+
+            for (int i = 0; i < this.MostrarUsuarios().Count; i++)
+            {
+                foreach (CajaDeAhorro c in caja)
+                {
+                    if (c.cbu == numCaja)
+                    {
+                        if (this.MostrarUsuarios()[i].cajas.Contains(c))
+                        {
+
+                        }
+                        else
+                        {
+                            titulares.Add(this.MostrarUsuarios()[i]);
+                        }
+                    }
+                }
+            }
+            return titulares.ToList();
+        }
+
+        // Agrega titular a caja de ahorro (INTERFAZ)
+        public bool AgregarTitular(int idUsuario, int numCaja)
+        {
+            bool resultado = false;
+            foreach (Usuario t in this.MostrarUsuarios())
+            {
+                if (t.id == idUsuario)
+                {
+                    foreach (CajaDeAhorro c in this.MostrarTodasLasCajas())
+                    {
+                        if (c.cbu == numCaja)
+                        {
+                            t.cajas.Add(c);
+                            c.titular.Add(t);
+                            resultado = true;
+                        }
+                    }
+                }
+            }
+            return resultado;
+        }
+
+        // Eliminar titular a caja de ahorro
+        public bool EliminarTitular(int idUsuario, int numCaja)
+        {
+            bool resultado = false;
+            foreach (Usuario t in this.MostrarUsuarios())
+            {
+                if (t.id == idUsuario)
+                {
+                    foreach (CajaDeAhorro c in this.MostrarTodasLasCajas())
+                    {
+                        if (c.cbu == numCaja)
+                        {
+                            if (c.titular.Count == 1)
+                            {
+                                return resultado;
+                            }
+                            else
+                            {
+                                t.cajas.Remove(c);
+                                c.titular.Remove(t);
+                                resultado = true;
+                            }
+                        }
+                    }
+                }
+            }
+            return resultado;
+        }
+
         public void AltaMovimiento(CajaDeAhorro c, string detalle, float monto)
         {
             c.agregarMovimiento(new Movimiento(c, detalle, monto));
@@ -168,7 +286,7 @@ namespace InterfazTP
             {
                 if (p.id == id && p.pagado == false)
                 {
-                    foreach(CajaDeAhorro c in usuarioActual.cajas)
+                    foreach (CajaDeAhorro c in usuarioActual.cajas)
                     {
                         if (c.cbu == identificador && c.saldo >= p.monto)
                         {
@@ -194,14 +312,14 @@ namespace InterfazTP
 
         public bool AltaPlazoFijo(Usuario u, float monto, int cbuDestino)
         {
-            foreach(CajaDeAhorro c in caja)
+            foreach (CajaDeAhorro c in caja)
             {
-                if(c.cbu == cbuDestino && c.saldo >= monto && monto >= 1000)
+                if (c.cbu == cbuDestino && c.saldo >= monto && monto >= 1000)
                 {
                     PlazoFijo pfj = new PlazoFijo(u, monto);
                     usuarioActual.pf.Add(pfj);
                     plazosFijos.Add(pfj);
-                    c.saldo -= pfj.monto;    
+                    c.saldo -= pfj.monto;
                     return true;
                 }
             }
@@ -229,15 +347,13 @@ namespace InterfazTP
         {
             foreach (PlazoFijo pf in plazosFijos)
             {
-                if(pf.id == plazoFijoID)
+                if (pf.id == plazoFijoID)
                 {
-                    usuarioActual.cajas.First().saldo = pf.monto + (pf.monto*(pf.getTasa() / 365));
+                    usuarioActual.cajas.First().saldo = pf.monto + (pf.monto * (pf.getTasa() / 365));
                     pf.pagado = true;
                 }
             }
         }
-
-        // AUGUSTO
 
         public void AltaTarjetaCredito()
         {
@@ -248,9 +364,9 @@ namespace InterfazTP
 
         public bool BajaTarjetaCredito(int numero)
         {
-            foreach(TarjetaDeCredito t in tarjetas)
+            foreach (TarjetaDeCredito t in tarjetas)
             {
-                if(t.id == numero && t.consumos == 0)
+                if (t.id == numero && t.consumos == 0)
                 {
                     tarjetas.Remove(t);
                     usuarioActual.tarjetas.Remove(t);
@@ -262,13 +378,13 @@ namespace InterfazTP
 
         public bool pagarTarjeta(int tarjeta, int cbu)
         {
-            foreach(TarjetaDeCredito t in tarjetas)
+            foreach (TarjetaDeCredito t in tarjetas)
             {
-                if(t.id == tarjeta)
+                if (t.id == tarjeta)
                 {
-                    foreach(CajaDeAhorro c in caja)
+                    foreach (CajaDeAhorro c in caja)
                     {
-                        if(t.consumos <= c.saldo)
+                        if (t.consumos <= c.saldo)
                         {
                             c.saldo -= t.consumos;
                             t.limite += t.consumos;
@@ -281,8 +397,7 @@ namespace InterfazTP
             return false;
         }
 
-        // Martin
-
+        // Metodo de Login
         public bool IniciarSesion(string usuario, string contrasenia)
         {
             bool encontrado = false;
@@ -317,14 +432,14 @@ namespace InterfazTP
                         }
                     }
                 }
-           
+
             }
             catch (Exception i)
             {
 
                 Console.WriteLine("error de " + i);
             }
-        return encontrado;
+            return encontrado;
         }
 
         public void CerrarSesion()
@@ -386,16 +501,21 @@ namespace InterfazTP
                     }
                 }
             }
-         return false;
+            return false;
         }
 
-
         // MOSTRAR DATOS - Nico
-
+        // Cajas de ahorro usuario loguead
         public List<CajaDeAhorro> MostrarCajasDeAhorro()
         {
             return this.usuarioActual.cajas.ToList();
         }
+
+        public List<CajaDeAhorro> MostrarTodasLasCajas()
+        {
+            return caja.ToList();
+        }
+
         public List<Movimiento> MostrarMovimientos(int cajaID)
         {
             if (usuarioActual != null)
@@ -426,50 +546,7 @@ namespace InterfazTP
         }
 
         ///////////////////////////////////////////////////////////////////////
-        // Devuelve datos necesarios para mostrar titular en forma de string
-        public string[] MostrarDatosTitular(int numCaja)
-        {
-            foreach (CajaDeAhorro c in caja)
-            {
-                if (c.cbu == numCaja)
-                {
-                    foreach (Usuario t in usuario)
-                    {
-                        if (t.cajas.Contains(c))
-                        {
-                            return new string[] { t.nombre, t.apellido, t.dni };
-                        }
-                    }
-                }
-            }
-            return new string[] { };
-        }
-
-        // Devuelve datos necesarios para mostrar titulares disponibles para agregar
-        public List<Usuario> MostrarTitularesDisponibles(int numCaja)
-        {
-            List<Usuario> titulares = new List<Usuario>();
-
-            for (int i = 0; i < this.MostrarUsuarios().Count; i++)
-            {
-                foreach (CajaDeAhorro c in caja)
-                {
-                    if (c.cbu == numCaja)
-                    {
-                        if (this.MostrarUsuarios()[i].cajas.Contains(c))
-                        {
-
-                        }
-                        else
-                        {
-                            titulares.Add(this.MostrarUsuarios()[i]);
-                        }
-                    }
-                }
-            }
-            return titulares.ToList();
-        }
-
+        
         public List<Movimiento> BuscarMovimiento(CajaDeAhorro cajas, String detalle, DateTime fecha, float monto)
         {
             List<Movimiento> nuevo = new List<Movimiento>();
@@ -496,9 +573,9 @@ namespace InterfazTP
         public CajaDeAhorro buscarCaja(int id)
         {
             CajaDeAhorro res = null;
-            foreach(CajaDeAhorro c in caja)
+            foreach (CajaDeAhorro c in caja)
             {
-                if(c.id == id)
+                if (c.id == id)
                 {
                     res = c;
                 }

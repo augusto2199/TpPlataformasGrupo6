@@ -133,6 +133,7 @@ namespace InterfazTP
             {
                 hijoModificarTitulares.Close();
                 hijoMain.Show();
+                hijoMain.RefreshModificacionesTitulares();
             }
         }
 

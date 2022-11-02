@@ -44,6 +44,7 @@ namespace InterfazTP
             argumentos = args;
             //label2.Text = (string)args[0];
             datos = new List<List<string>>();
+            refreshDataCajaDeAhorro();
             refreshDataCbu();
             refreshDataPlazoFijo();
             OBSPLazosFijos();
@@ -59,11 +60,11 @@ namespace InterfazTP
 
         public delegate void TransDelegadoModificarTitularesCajaAhorro(bool modificar);
         public delegate void TransDelegadoCerrarSesion(bool modificar);
-
         public delegate void TransDelegadoModificarUsuario(bool modificar);
 
         // CAJA DE AHORRO ////////////////////////////////////////////////////////////
 
+        // Refresh Caja de Ahorro
         private void refreshDataCajaDeAhorro()
         {
             dataGridView1.Rows.Clear();
@@ -72,6 +73,12 @@ namespace InterfazTP
             {
                 dataGridView1.Rows.Add(c.toArray());
             }
+        }
+
+        // Refresh de cajas al agregar o eliminar Titulares
+        public void RefreshModificacionesTitulares()
+        {
+            refreshDataCajaDeAhorro();
         }
 
         private void refreshDataCbu()
@@ -425,7 +432,7 @@ namespace InterfazTP
 
         private void label9_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -443,6 +450,11 @@ namespace InterfazTP
                 this.TransFCerrarSesion(confirmacion);
                 banco.CerrarSesion();
             }
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
 
         }
     }
