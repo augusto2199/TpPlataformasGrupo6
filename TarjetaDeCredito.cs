@@ -28,7 +28,14 @@ namespace InterfazTP
             limite = 100000;
             consumos = 0;
         }
-
+        public TarjetaDeCredito(int id,int numero,int codigov,float limi,float consumo)
+        {
+            this.id = id;
+            this.numero = numero;
+            this.codigoV = codigov;
+            this.limite = limi;
+            this.consumos = consumo;
+        }
         private int generarId()
         {
             ultimoId++;

@@ -25,6 +25,7 @@ namespace InterfazTP
         private int selectedPLazoFijo;
         private int selectedPago;
         private int selectedTarjeta;
+        private int selectedUsuario;
 
         public Main(string usuario, Banco banco)
         {
@@ -34,7 +35,10 @@ namespace InterfazTP
             refreshDataCbu();
             refreshDataPlazoFijo();
             OBSPLazosFijos();
-            label9.Text = PlazoFijo.tasa.ToString();
+            refreshUsuarios();
+            refreshDataPagos();
+            refreshDataTarjetasDeCredito();
+            //label9.Text = PlazoFijo.tasa.ToString();
         }
 
         public Main(object[] args)
@@ -44,10 +48,16 @@ namespace InterfazTP
             argumentos = args;
             //label2.Text = (string)args[0];
             datos = new List<List<string>>();
+            refreshDataCajaDeAhorro();
             refreshDataCbu();
             refreshDataPlazoFijo();
             OBSPLazosFijos();
-            label9.Text = PlazoFijo.tasa.ToString();
+            refreshUsuarios();
+            refreshDataPagos();
+            refreshDataTarjetasDeCredito();
+            //label9.Text = PlazoFijo.tasa.ToString();
+
+
         }
 
         // Modificar Usuario
@@ -59,19 +69,35 @@ namespace InterfazTP
 
         public delegate void TransDelegadoModificarTitularesCajaAhorro(bool modificar);
         public delegate void TransDelegadoCerrarSesion(bool modificar);
-
         public delegate void TransDelegadoModificarUsuario(bool modificar);
 
         // CAJA DE AHORRO ////////////////////////////////////////////////////////////
 
+        // Refresh Caja de Ahorro
         private void refreshDataCajaDeAhorro()
         {
             dataGridView1.Rows.Clear();
 
-            foreach(CajaDeAhorro c in banco.usuarioActual.obtenerCajas())
+            if (banco.usuarioActual.administrador)
             {
-                dataGridView1.Rows.Add(c.toArray());
+                foreach (CajaDeAhorro c in banco.MostrarTodasLasCajas())
+                {
+                    dataGridView1.Rows.Add(c.toArray());
+                }
             }
+            else
+            {
+                foreach (CajaDeAhorro c in banco.usuarioActual.obtenerCajas())
+                {
+                    dataGridView1.Rows.Add(c.toArray());
+                }
+            }
+        }
+
+        // Refresh de cajas al agregar o eliminar Titulares
+        public void RefreshModificacionesTitulares()
+        {
+            refreshDataCajaDeAhorro();
         }
 
         private void refreshDataCbu()
@@ -82,22 +108,40 @@ namespace InterfazTP
             comboBox4.Items.Clear();
             comboBox5.Items.Clear();
 
-            foreach (CajaDeAhorro c in banco.usuarioActual.obtenerCajas())
+            if (banco.usuarioActual.administrador)
             {
-                comboBox1.Items.Add(c.cbu.ToString());
-                comboBox3.Items.Add(c.cbu.ToString());
-                comboBox4.Items.Add(c.cbu.ToString());
-                comboBox5.Items.Add(c.cbu.ToString());
+                foreach (CajaDeAhorro c in banco.MostrarTodasLasCajas())
+                {
+                    comboBox1.Items.Add(c.cbu.ToString());
+                    comboBox3.Items.Add(c.cbu.ToString());
+                    comboBox4.Items.Add(c.cbu.ToString());
+                    comboBox5.Items.Add(c.cbu.ToString());
+                }
+                foreach (TarjetaDeCredito t in banco.MostrarTarjetas())
+                {
+                    comboBox4.Items.Add(t.numero.ToString());
+                }
+            }
+            else
+            {
+
+                foreach (TarjetaDeCredito t in banco.usuarioActual.obtenerTarjetas())
+                {
+                    comboBox4.Items.Add(t.numero.ToString());
+                }
+
+                foreach (CajaDeAhorro c in banco.usuarioActual.obtenerCajas())
+                {
+                    comboBox1.Items.Add(c.cbu.ToString());
+                    comboBox3.Items.Add(c.cbu.ToString());
+                    comboBox4.Items.Add(c.cbu.ToString());
+                    comboBox5.Items.Add(c.cbu.ToString());
+                }
             }
 
-            foreach (CajaDeAhorro c in banco.MostrarCajasDeAhorro())
+            foreach (CajaDeAhorro c in banco.MostrarTodasLasCajas())
             {
-                    comboBox2.Items.Add(c.cbu.ToString());
-            }
-
-            foreach (TarjetaDeCredito t in banco.usuarioActual.obtenerTarjetas())
-            {
-                comboBox4.Items.Add(t.numero.ToString());
+                comboBox2.Items.Add(c.cbu.ToString());
             }
         }
 
@@ -124,7 +168,7 @@ namespace InterfazTP
         // Agregar Caja Ahorro
         private void button1_Click(object sender, EventArgs e)
         {
-            banco.AltaCajaAhorro(banco.usuarioActual);
+            banco.AltaCajaAhorro();
             MessageBox.Show("Se agrego una nueva Caja de Ahorro.");
             refreshDataCajaDeAhorro();
             refreshDataCbu();
@@ -134,9 +178,9 @@ namespace InterfazTP
         //Eliminar Caja de Ahorro
         private void button3_Click(object sender, EventArgs e)
         {
-            if (banco.BajaCajaAhorro(Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value)))
+            if (banco.BajaCajaAhorro(selectedCaja))
             {
-                selectedCaja = banco.usuarioActual.obtenerCajas().First().id;
+                MessageBox.Show(selectedCaja.ToString());
                 MessageBox.Show("Se elimino correctamente");
                 refreshDataCbu();
                 refreshDataCajaDeAhorro();
@@ -184,6 +228,8 @@ namespace InterfazTP
         {
             if(banco.Transferir(Convert.ToInt32(comboBox1.Text), Convert.ToInt32(comboBox2.Text), Convert.ToInt32(textBox2.Text)))
             {
+                MessageBox.Show("Hola linea de main 521");
+
                 MessageBox.Show("Se transfirio correctamente $" + textBox2.Text + "A la cuenta: " + comboBox2.Text);
                 refreshDataCajaMovimientos();
                 refreshDataCajaDeAhorro();
@@ -207,9 +253,19 @@ namespace InterfazTP
         {
             dataGridView2.Rows.Clear();
 
-            foreach (PlazoFijo p in banco.usuarioActual.pf)
+            if (banco.usuarioActual.administrador)
             {
-                dataGridView2.Rows.Add(p.toArray());
+                foreach (PlazoFijo p in banco.MostrarPlazoFijos())
+                {
+                    dataGridView2.Rows.Add(p.toArray());
+                }
+            }
+            else
+            {
+                foreach (PlazoFijo p in banco.usuarioActual.pf)
+                {
+                    dataGridView2.Rows.Add(p.toArray());
+                }
             }
         }
 
@@ -266,14 +322,32 @@ namespace InterfazTP
             dataGridView3.Rows.Clear();
             dataGridView6.Rows.Clear();
 
-            foreach (Pago p in banco.usuarioActual.pagos)
+            if (banco.usuarioActual.administrador)
             {
-                if(p.pagado == true) {
-                     dataGridView3.Rows.Add(p.toArray());
-                }
-                else
+                foreach (Pago p in banco.MostrarPagos())
                 {
-                    dataGridView6.Rows.Add(p.toArray());
+                    if (p.pagado == true)
+                    {
+                        dataGridView3.Rows.Add(p.toArray());
+                    }
+                    else
+                    {
+                        dataGridView6.Rows.Add(p.toArray());
+                    }
+                }
+            }
+            else
+            {
+                foreach (Pago p in banco.usuarioActual.pagos)
+                {
+                    if (p.pagado == true)
+                    {
+                        dataGridView3.Rows.Add(p.toArray());
+                    }
+                    else
+                    {
+                        dataGridView6.Rows.Add(p.toArray());
+                    }
                 }
             }
         }
@@ -330,9 +404,19 @@ namespace InterfazTP
         {
             dataGridView4.Rows.Clear();
 
-            foreach (TarjetaDeCredito t in banco.usuarioActual.tarjetas)
+            if (banco.usuarioActual.administrador)
             {
-                dataGridView4.Rows.Add(t.toArray());
+                foreach (TarjetaDeCredito t in banco.MostrarTarjetas())
+                {
+                    dataGridView4.Rows.Add(t.toArray());
+                }
+            }
+            else
+            {
+                foreach (TarjetaDeCredito t in banco.usuarioActual.tarjetas)
+                {
+                    dataGridView4.Rows.Add(t.toArray());
+                }
             }
         }
 
@@ -425,7 +509,7 @@ namespace InterfazTP
 
         private void label9_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -443,6 +527,68 @@ namespace InterfazTP
                 this.TransFCerrarSesion(confirmacion);
                 banco.CerrarSesion();
             }
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+		private void button17_Click(object sender, EventArgs e)
+		{
+            // Todo lo que quieras lo probás acá.
+            // Es algo dentro de tabControl1, ya que este es el
+            // objeto que contiene la pestaña que queremos ocultar.
+            tabControl1.TabPages.RemoveAt(4);
+        }
+
+        private void dataGridView7_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedUsuario = Convert.ToInt32(dataGridView7.Rows[dataGridView7.CurrentRow.Index].Cells[0].Value);
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+        private void refreshUsuarios()
+        {
+            dataGridView7.Rows.Clear();
+            if (banco.usuarioActual.administrador)
+            {
+                foreach (Usuario u in banco.MostrarUsuarios())
+                {
+                    dataGridView7.Rows.Add(u.toArray());
+                }
+            }
+        }
+
+        // Boton Desbloquear Usuarios
+        private void mostrarUusuarios_Click(object sender, EventArgs e)
+        {
+            banco.desbloquearUsuario(selectedUsuario);
+            refreshUsuarios();
+        }
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
 
         }
     }

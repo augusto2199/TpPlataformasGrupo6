@@ -24,6 +24,16 @@ namespace InterfazTP
             fecha = DateTime.Now;
         }
 
+        public Movimiento(int id, string detalle, float monto, DateTime fecha, int caja_id)
+        {
+            this.id = id;
+            this.detalle = detalle;
+            this.monto = monto;
+            this.fecha = fecha;
+            caja = new CajaDeAhorro();
+            caja.id = caja_id;
+        }
+
         private int generarId()
         {
             ultimoId++;

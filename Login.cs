@@ -38,6 +38,8 @@ namespace InterfazTP
             if (usuario != null && usuario != "")
             {
                 this.TransfEvento(usuario, pass);
+                textBox1.Text = "";
+                textBox2.Text = "";
             }
             else
             {

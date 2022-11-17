@@ -62,3 +62,261 @@ C:\Users\pupik\Desktop\Plataformas de Desarrollo\obj\Debug\net6.0-windows\Interf
 C:\Users\pupik\Desktop\Plataformas de Desarrollo\obj\Debug\net6.0-windows\InterfazTP.genruntimeconfig.cache
 C:\Users\pupik\Desktop\Plataformas de Desarrollo\obj\Debug\net6.0-windows\ref\InterfazTP.dll
 C:\Users\pupik\Desktop\Plataformas de Desarrollo\obj\Debug\net6.0-windows\InterfazTP.ModificarTitulares.resources
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.Form1.resources
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.Login.resources
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.Main.resources
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.ModificarDatosUsuario.resources
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.ModificarTitulares.resources
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.Registrar.resources
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\refint\InterfazTP.dll
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\bin\Debug\net6.0-windows\InterfazTP.exe
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\bin\Debug\net6.0-windows\InterfazTP.deps.json
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\bin\Debug\net6.0-windows\InterfazTP.runtimeconfig.json
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\bin\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\bin\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.genruntimeconfig.cache
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\ref\InterfazTP.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\bin\Debug\net6.0-windows\InterfazTP.exe
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\bin\Debug\net6.0-windows\InterfazTP.deps.json
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\bin\Debug\net6.0-windows\InterfazTP.runtimeconfig.json
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\bin\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\bin\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.csproj.AssemblyReference.cache
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.Form1.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.Login.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.Main.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.ModificarDatosUsuario.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.ModificarTitulares.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.Registrar.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.csproj.GenerateResource.cache
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfoInputs.cache
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfo.cs
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.csproj.CoreCompileInputs.cache
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\refint\InterfazTP.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.genruntimeconfig.cache
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\ref\InterfazTP.dll
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\bin\Debug\net6.0-windows\InterfazTP.exe
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\bin\Debug\net6.0-windows\InterfazTP.deps.json
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\bin\Debug\net6.0-windows\InterfazTP.runtimeconfig.json
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\bin\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\bin\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.Form1.resources
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.Login.resources
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.Main.resources
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.ModificarDatosUsuario.resources
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.ModificarTitulares.resources
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.Registrar.resources
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\refint\InterfazTP.dll
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.genruntimeconfig.cache
+C:\Users\Usuario\Desktop\Nueva carpeta\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\ref\InterfazTP.dll
+C:\Users\marti\Desktop\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.csproj.AssemblyReference.cache
+C:\Users\marti\Desktop\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.Form1.resources
+C:\Users\marti\Desktop\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.Login.resources
+C:\Users\marti\Desktop\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.Main.resources
+C:\Users\marti\Desktop\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.ModificarDatosUsuario.resources
+C:\Users\marti\Desktop\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.ModificarTitulares.resources
+C:\Users\marti\Desktop\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.Registrar.resources
+C:\Users\marti\Desktop\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.csproj.GenerateResource.cache
+C:\Users\marti\Desktop\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marti\Desktop\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfoInputs.cache
+C:\Users\marti\Desktop\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfo.cs
+C:\Users\marti\Desktop\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.csproj.CoreCompileInputs.cache
+C:\Users\marti\Desktop\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\marti\Desktop\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\refint\InterfazTP.dll
+C:\Users\marti\Desktop\TpPlataformasGrupo6-kevin\obj\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\obj\Debug\net6.0-windows\InterfazTP.csproj.AssemblyReference.cache
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\obj\Debug\net6.0-windows\InterfazTP.Form1.resources
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\obj\Debug\net6.0-windows\InterfazTP.Login.resources
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\obj\Debug\net6.0-windows\InterfazTP.Main.resources
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\obj\Debug\net6.0-windows\InterfazTP.ModificarDatosUsuario.resources
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\obj\Debug\net6.0-windows\InterfazTP.ModificarTitulares.resources
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\obj\Debug\net6.0-windows\InterfazTP.Registrar.resources
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\obj\Debug\net6.0-windows\InterfazTP.csproj.GenerateResource.cache
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\obj\Debug\net6.0-windows\InterfazTP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfoInputs.cache
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfo.cs
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\obj\Debug\net6.0-windows\InterfazTP.csproj.CoreCompileInputs.cache
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\obj\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\obj\Debug\net6.0-windows\refint\InterfazTP.dll
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\obj\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\bin\Debug\net6.0-windows\InterfazTP.exe
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\bin\Debug\net6.0-windows\InterfazTP.deps.json
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\bin\Debug\net6.0-windows\InterfazTP.runtimeconfig.json
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\bin\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\bin\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\obj\Debug\net6.0-windows\InterfazTP.csproj.CopyComplete
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\obj\Debug\net6.0-windows\InterfazTP.genruntimeconfig.cache
+C:\Users\mauro\OneDrive\Escritorio\TpPlataformasGrupo6\TpPlataformasGrupo6\obj\Debug\net6.0-windows\ref\InterfazTP.dll
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\bin\Debug\net6.0-windows\InterfazTP.exe
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\bin\Debug\net6.0-windows\InterfazTP.deps.json
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\bin\Debug\net6.0-windows\InterfazTP.runtimeconfig.json
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\bin\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\bin\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\obj\Debug\net6.0-windows\InterfazTP.csproj.AssemblyReference.cache
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\obj\Debug\net6.0-windows\InterfazTP.Form1.resources
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\obj\Debug\net6.0-windows\InterfazTP.Login.resources
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\obj\Debug\net6.0-windows\InterfazTP.Main.resources
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\obj\Debug\net6.0-windows\InterfazTP.ModificarDatosUsuario.resources
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\obj\Debug\net6.0-windows\InterfazTP.ModificarTitulares.resources
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\obj\Debug\net6.0-windows\InterfazTP.Registrar.resources
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\obj\Debug\net6.0-windows\InterfazTP.csproj.GenerateResource.cache
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\obj\Debug\net6.0-windows\InterfazTP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfoInputs.cache
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfo.cs
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\obj\Debug\net6.0-windows\InterfazTP.csproj.CoreCompileInputs.cache
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\obj\Debug\net6.0-windows\InterfazTP.csproj.CopyComplete
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\obj\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\obj\Debug\net6.0-windows\refint\InterfazTP.dll
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\obj\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\obj\Debug\net6.0-windows\InterfazTP.genruntimeconfig.cache
+C:\Users\marti\Desktop\TpPlataformasGrupo6_2\obj\Debug\net6.0-windows\ref\InterfazTP.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\obj\Debug\net6.0-windows\InterfazTP.csproj.AssemblyReference.cache
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\obj\Debug\net6.0-windows\InterfazTP.Form1.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\obj\Debug\net6.0-windows\InterfazTP.Login.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\obj\Debug\net6.0-windows\InterfazTP.Main.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\obj\Debug\net6.0-windows\InterfazTP.ModificarDatosUsuario.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\obj\Debug\net6.0-windows\InterfazTP.ModificarTitulares.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\obj\Debug\net6.0-windows\InterfazTP.Registrar.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\obj\Debug\net6.0-windows\InterfazTP.csproj.GenerateResource.cache
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\obj\Debug\net6.0-windows\InterfazTP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfoInputs.cache
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfo.cs
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\obj\Debug\net6.0-windows\InterfazTP.csproj.CoreCompileInputs.cache
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\obj\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\obj\Debug\net6.0-windows\refint\InterfazTP.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\obj\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\bin\Debug\net6.0-windows\InterfazTP.exe
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\bin\Debug\net6.0-windows\InterfazTP.deps.json
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\bin\Debug\net6.0-windows\InterfazTP.runtimeconfig.json
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\bin\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\bin\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\obj\Debug\net6.0-windows\InterfazTP.csproj.CopyComplete
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\obj\Debug\net6.0-windows\InterfazTP.genruntimeconfig.cache
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.2\obj\Debug\net6.0-windows\ref\InterfazTP.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.csproj.AssemblyReference.cache
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.Form1.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.Login.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.Main.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.ModificarDatosUsuario.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.ModificarTitulares.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.Registrar.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.csproj.GenerateResource.cache
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfoInputs.cache
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfo.cs
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.csproj.CoreCompileInputs.cache
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\obj\Debug\net6.0-windows\refint\InterfazTP.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\bin\Debug\net6.0-windows\InterfazTP.exe
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\bin\Debug\net6.0-windows\InterfazTP.deps.json
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\bin\Debug\net6.0-windows\InterfazTP.runtimeconfig.json
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\bin\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.csproj.CopyComplete
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.genruntimeconfig.cache
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\bin\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\obj\Debug\net6.0-windows\ref\InterfazTP.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\bin\Debug\net6.0-windows\InterfazTP.exe
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\bin\Debug\net6.0-windows\InterfazTP.deps.json
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\bin\Debug\net6.0-windows\InterfazTP.runtimeconfig.json
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\bin\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\bin\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.csproj.AssemblyReference.cache
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.Form1.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.Login.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.Main.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.ModificarDatosUsuario.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.ModificarTitulares.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.Registrar.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.csproj.GenerateResource.cache
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfoInputs.cache
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfo.cs
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.csproj.CoreCompileInputs.cache
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.csproj.CopyComplete
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\obj\Debug\net6.0-windows\refint\InterfazTP.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.genruntimeconfig.cache
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\obj\Debug\net6.0-windows\ref\InterfazTP.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.Properties.Resources.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasv.2.3\obj\Debug\net6.0-windows\InterfazTP.Properties.Resources.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\bin\Debug\net6.0-windows\InterfazTP.exe
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\bin\Debug\net6.0-windows\InterfazTP.deps.json
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\bin\Debug\net6.0-windows\InterfazTP.runtimeconfig.json
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\bin\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\bin\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\InterfazTP.csproj.AssemblyReference.cache
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\InterfazTP.Form1.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\InterfazTP.Login.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\InterfazTP.Main.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\InterfazTP.ModificarDatosUsuario.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\InterfazTP.ModificarTitulares.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\InterfazTP.Properties.Resources.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\InterfazTP.Registrar.resources
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\InterfazTP.csproj.GenerateResource.cache
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\InterfazTP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfoInputs.cache
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfo.cs
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\InterfazTP.csproj.CoreCompileInputs.cache
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\InterfazTP.csproj.CopyComplete
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\refint\InterfazTP.dll
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\InterfazTP.genruntimeconfig.cache
+C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\ref\InterfazTP.dll

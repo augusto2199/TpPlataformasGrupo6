@@ -26,7 +26,7 @@ namespace InterfazTP
         // Boton confirmar modificar datos
         private void button1_Click(object sender, EventArgs e)
         {
-            if (banco.ModificarUsuario(textBox5.Text, textBox6.Text, textBox1.Text, textBox2.Text, textBox4.Text))
+            if (banco.ModificarUsuario(banco.usuarioActual.id, textBox5.Text, textBox6.Text, textBox1.Text, textBox2.Text, textBox4.Text))
             {
                 MessageBox.Show("Usuario Modificado con exito!");
                 confirmacionModificacion = true;

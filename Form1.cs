@@ -26,10 +26,7 @@ namespace InterfazTP
         public Form1()
         {
             InitializeComponent();
-            banco = new Banco();
-            banco.AltaUsuario("12345678", "12345678", "12345678", "12345678", "12345678", "12345678");//usuario de prueba
-            banco.AltaUsuario("test0001", "test0001", "test1", "test1", "1234", "test1");
-            banco.AltaUsuario("test0002", "test0002", "test2", "test2", "5678", "test2");
+            banco = new Banco();                
             Logued = false;
             hijoLogin = new Login(banco);
             hijoLogin.logued = false;
@@ -133,6 +130,7 @@ namespace InterfazTP
             {
                 hijoModificarTitulares.Close();
                 hijoMain.Show();
+                hijoMain.RefreshModificacionesTitulares();
             }
         }
 
@@ -144,6 +142,10 @@ namespace InterfazTP
                 hijoLogin.Show();
             }
         }
-        
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

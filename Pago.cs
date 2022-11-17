@@ -24,6 +24,15 @@ namespace InterfazTP
             this.monto = monto;
             this.pagado = false;
         }
+        public Pago(int id, float monto, string nombre,bool pagado,string metodo)
+        {
+            this.id = id;
+            this.nombre = nombre;
+            this.monto = monto;
+            this.metodo = metodo;
+            this.pagado = pagado;
+            
+        }
 
         private int generarId()
         {

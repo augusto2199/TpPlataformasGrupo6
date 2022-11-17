@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -8,37 +9,43 @@ namespace InterfazTP
 {
     public class CajaDeAhorro
     {
+        
         public int id { get; set; }
-        public static int ultimoId = 0;
+        
         public int cbu { get; set; }
-
-        private static int cbuAnterior = 1000000000;
-        public List<Usuario> titular { get; set; }
+       
         public float saldo { get; set; }
+        public List<Usuario> titular { get; set; }
         public List<Movimiento> movimientos { get; set; }
+        private BaseDeDatos db;
 
 
-        public CajaDeAhorro()
+
+        public CajaDeAhorro(int id,int cbu,float saldo)
+         {
+            this.id = id;
+            this.saldo = saldo;
+            this.cbu = cbu;
+            titular = new List<Usuario>();
+            movimientos = new List<Movimiento>();
+            db = new BaseDeDatos();
+            InicializarAtributos(id);
+        }
+        private void InicializarAtributos(int caja)
+        {//Si lo activo se hace un loop jajajajaXD
+            this.titular = db.mostrarUsuarioEnCaja(caja);
+           this.movimientos = db.mostrarMovimientoEnCaja(caja);
+        }
+
+        public CajaDeAhorro( )
         {
-            cbu = generarCbu();
-            id = generarId();
             titular = new List<Usuario>();
 
+
             movimientos = new List<Movimiento>();
+        }
+       
 
-        }
-
-        private int generarId()
-        {
-            ultimoId++;
-            return ultimoId;
-        }
-        
-        private int generarCbu()
-        {
-            cbuAnterior++;
-            return cbuAnterior;
-        }
 
         public void agregarMovimiento(Movimiento mov)
         {
