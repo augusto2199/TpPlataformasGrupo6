@@ -6,80 +6,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using InterfazTP.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace InterfazTP
 {
     public class Banco
     {
-        public List<Usuario> usuario
-        {
-            get; set;
-        }
-        private List<CajaDeAhorro> caja
-        {
-            get; set;
-        }
-        private List<PlazoFijo> plazosFijos
-        {
-            get; set;
-        }
-        private List<TarjetaDeCredito> tarjetas
-        {
-            get; set;
-        }
-        private List<Pago> pagos
-        {
-            get; set;
-        }
-        private List<Movimiento> movimientos
-        {
-            get; set;
-        }
         public Usuario usuarioActual
         {
             get; set;
         }
 
-        public int totalCaja;
-
-        private BaseDeDatos db;
+        private MyContext contexto;
 
         public Banco()
         {
-            pagos = new List<Pago>();
-            tarjetas = new List<TarjetaDeCredito>();
-            movimientos = new List<Movimiento>();
-            plazosFijos = new List<PlazoFijo>();
-            caja = new List<CajaDeAhorro>();
-            usuario = new List<Usuario>();
-            db = new BaseDeDatos();
             InicializarAtributos();
-            recorridoUsuio();
-
+            OBSPLazosFijos();
         }
 
         // Llama a todos los datos de la BD
         private void InicializarAtributos()
         {
-            usuario = db.inicializarUsuarios();
-            caja = db.mostrarCaja();
-            plazosFijos = db.mostrarPlazoFijo();
-            tarjetas = db.mostrarTarjetaDeCredito();
-            movimientos = db.mostrarMovimiento();
-            pagos = db.mostrarPago();
-        }
-        private void recorridoUsuio() { 
-            foreach (Usuario usu in usuario)
+            try
             {
-                usu.InicializarAtributos(usu.id);
-            }        
-        
+                contexto = new MyContext();
+                contexto.usuarios.Include(u => u.cajas).Include(u => u.pf).Include(u => u.tarjetas).Include(u => u.pagos).Load();
+                contexto.cajaAhorro.Include(c => c.Titulares).Include(c => c.movimientos).Load();
+                contexto.pago.Load();
+                contexto.tarjetaCredito.Load();
+                contexto.movimiento.Load();
+                contexto.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
+
         /******* METODOS ABM *******/
 
         /*                                     USUARIO                                     */
         // Registrar Usuario
-        public bool AltaUsuario(string user, string password, string nombre, string apellido, string dni, string email, bool esAdmin = false)
+        public bool AltaUsuario(string user, string password, string nombre, string apellido, string dni, string email)
         {
             if (password.Length < 8 || user.Length < 8)
             {
@@ -88,42 +58,41 @@ namespace InterfazTP
             }
             else
             {
-                int identificador = db.crearUsuario(Convert.ToInt32(dni), nombre, apellido, email, user, password, true, false);
+                try
+                {
+                    Usuario nuevoUsuario = new Usuario(Convert.ToInt32(dni), nombre, apellido, email, user, password, 0, false, false);
 
-                Usuario nuevoUsuario = new Usuario();
-                nuevoUsuario.usuario = user;
-                nuevoUsuario.password = password;
-                nuevoUsuario.nombre = nombre;
-                nuevoUsuario.apellido = apellido;
-                nuevoUsuario.dni = Convert.ToInt32(dni);
-                nuevoUsuario.email = email;
-                nuevoUsuario.id = identificador;
-                nuevoUsuario.administrador = esAdmin;
+                    contexto.usuarios.Add(nuevoUsuario);
+                    contexto.SaveChanges();
 
-                usuario.Add(nuevoUsuario);
-
-                return true;
-
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
+
 
         // Modificar datos de Usuario
         public bool ModificarUsuario(int id, string user, string password, string nombre, string apellido, string email)
         {
             bool result = false;
 
-            foreach (var usuario in usuario)
+            Usuario u = contexto.usuarios.Where(u => u.id_usuario == id).FirstOrDefault();
+
+            if (u != null)
             {
-                if (usuario.id == id)
-                {
-                    usuario.nombre = user;
-                    usuario.password = password;
-                    usuario.nombre = nombre;
-                    usuario.apellido = apellido;
-                    usuario.email = email;
-                    db.ModificarDatosUsuario(id, user, password, nombre, apellido, email);
-                    result = true;
-                }
+                u.nombre = user;
+                u.password = password;
+                u.nombre = nombre;
+                u.apellido = apellido;
+                u.email = email;
+
+                contexto.usuarios.Update(u);
+                contexto.SaveChanges();
+                result = true;
             }
             return result;
         }
@@ -131,17 +100,22 @@ namespace InterfazTP
         // Eliminar Usuario
         public void EliminarUsuario(int usuarioId)
         {
-            foreach (Usuario u in this.MostrarUsuarios())
+            try
             {
-                if (u.id == usuarioId)
+                foreach (Usuario u in contexto.usuarios)
                 {
-                    u.cajas.RemoveAll(c => c.id == usuarioId);
-                    u.tarjetas.RemoveAll(c => c.id == usuarioId);
-                    u.pf.RemoveAll(c => c.id == usuarioId);
-                    u.pagos.RemoveAll(c => c.id == usuarioId);
-                    this.usuario.Remove(u);
+                    if (u.id_usuario == usuarioId)
+                    {
+                        contexto.usuarios.Remove(u);
+                        contexto.SaveChanges();
+                    }
                 }
             }
+            catch (Exception ex) 
+            {
+
+            }
+        
         }
         ////////////////////////////////////////////////////////////////////////////
 
@@ -151,24 +125,27 @@ namespace InterfazTP
         // Alta caja de ahorro
         public void AltaCajaAhorro()
         {
-            if (usuarioActual != null)
+            CajaDeAhorro evenNumQuery = contexto.cajaAhorro.OrderByDescending(c => c.id).FirstOrDefault();
+            int nuevoCbu = 0;
+            if (evenNumQuery != null)
             {
-                // Usuario
-                int idCajaAhorro = db.crearCaja();
-                db.modificarCBUDeCaja(idCajaAhorro);
+                nuevoCbu = evenNumQuery.id;
+            }
 
-                CajaDeAhorro nuevaCajaAhorro = new CajaDeAhorro();
-                nuevaCajaAhorro.saldo = 0;
-                nuevaCajaAhorro.cbu = idCajaAhorro;
-                nuevaCajaAhorro.titular.Add(usuarioActual);
-                nuevaCajaAhorro.id = idCajaAhorro;
+            try
+            {
 
-                usuarioActual.cajas.Add(nuevaCajaAhorro);
+                CajaDeAhorro cajaAhorro = new CajaDeAhorro((nuevoCbu + 1), 0);
 
-                db.VincularCuentas(idCajaAhorro, usuarioActual.id);
-
-                // Banco
-                caja.Add(nuevaCajaAhorro);
+                if (usuarioActual != null)
+                {
+                    usuarioActual.cajas.Add(cajaAhorro);
+                    contexto.usuarios.Update(usuarioActual);
+                    contexto.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
 
             }
         }
@@ -176,73 +153,79 @@ namespace InterfazTP
         // Baja caja de ahorro
         public bool BajaCajaAhorro(int idCaja)
         {
+            try
+            { 
             if (usuarioActual != null)
             {
-                foreach (var c in caja)
+                foreach (var c in MostrarTodasLasCajas())
                 {
                     if (c.id == idCaja)
                     {
                         if (c.saldo == 0)
                         {
-                            usuarioActual.cajas.Remove(c);
-                            caja.Remove(c);
+                            contexto.cajaAhorro.Remove(c);
+                            contexto.SaveChanges();
 
-                            db.eliminarCajaUsuario(idCaja);
-                            db.eliminarMovimientoDeCaja(idCaja);
-                            db.eliminarCaja(idCaja);
                             return true;
                         }
                     }
                 }
             }
+            }
+            catch (Exception e)
+            {
+
+            }
             return false;
-        }
-
-        // Modificar datos de caja de ahorro
-        public void ModificarCajaAhorro(int id)
-        {
-
         }
 
         // Deposita el monto recibido por parametro a la caja seleccionada por parametro y crea un movimiento
         public bool Depositar(int idCaja, float monto)
         {
-            if (usuarioActual != null)
+            try
             {
-                foreach (CajaDeAhorro c in usuarioActual.cajas)
-                {
-                    if (c.id == idCaja)
-                    {
-                        
-                        c.saldo = monto + c.saldo;
-                        AltaMovimiento(c, "Deposito", monto);
 
-                        db.crearMovimiento(idCaja, "Deposito", monto);
-                        db.modificarSaldoDeCaja(c.saldo, idCaja);
-                        return true;
-                    }
-                }
+            
+            CajaDeAhorro ca = contexto.cajaAhorro.Where(ca => ca.id == idCaja).FirstOrDefault();
+
+            if (ca != null)
+            {
+                ca.saldo = monto + ca.saldo;
+                AltaMovimiento(ca, "Deposito", monto);
+                contexto.cajaAhorro.Update(ca);
+                contexto.SaveChanges();
+
+                return true;
             }
+            }
+            catch (Exception e)
+            {
+
+            }
+
             return false;
         }
 
         // Retira monto recibido por parametro de la caja de ahorro seleccionada por parametro y crea un movimiento
         public bool Retirar(int CajaID, float monto)
         {
-            if (usuarioActual != null)
+            try
             {
-                foreach (CajaDeAhorro c in usuarioActual.cajas)
-                {
-                    if (c.saldo >= monto && c.id == CajaID)
-                    {
-                        c.saldo = c.saldo - monto;
-                        AltaMovimiento(c, "Retiro", monto);
+            CajaDeAhorro ca = contexto.cajaAhorro.Where(ca => ca.id == CajaID).FirstOrDefault();
 
-                        db.crearMovimiento(CajaID, "Retiro", monto);
-                        db.modificarSaldoDeCaja(c.saldo, CajaID);
-                        return true;
-                    }
-                }
+            if (ca != null && ca.saldo > 0)
+            {
+                ca.saldo = ca.saldo - monto;
+                AltaMovimiento(ca, "Retiro", monto);
+                contexto.cajaAhorro.Update(ca);
+                contexto.SaveChanges();
+
+                return true;
+            }
+            }
+            catch (Exception e)
+            {
+
             }
             return false;
         }
@@ -250,12 +233,14 @@ namespace InterfazTP
         // Transfiere el monto recibido por parametro de una caja seleccionada por parametro a otra seleccionada por parametro
         public bool Transferir(int cajaOrigenCBU, int cajaDestinoCBU, float monto)
         {
-            foreach (CajaDeAhorro c in usuarioActual.cajas)
+            try
+            {
+            foreach (CajaDeAhorro c in MostrarTodasLasCajas())
             {
                 if (cajaOrigenCBU == c.cbu && c.saldo >= monto && cajaOrigenCBU != cajaDestinoCBU)
                 {
                     c.saldo -= monto;
-                    foreach (CajaDeAhorro ca in caja)
+                    foreach (CajaDeAhorro ca in MostrarTodasLasCajas())
                     {
                         if (cajaDestinoCBU == ca.cbu)
                         {
@@ -264,12 +249,20 @@ namespace InterfazTP
                             AltaMovimiento(ca, "Transferencia Recibida", monto);
                             AltaMovimiento(c, "Transferencia Enviada", monto);
 
-                            db.crearMovimiento(ca.id, "Transferencia Recibida", monto);
-                            db.crearMovimiento(c.id, "Transferencia Enviada", monto);
+                            contexto.cajaAhorro.Update(ca);
+                            contexto.cajaAhorro.Update(c);
+
+                            contexto.SaveChanges();
+
                             return true;
                         }
                     }
                 }
+            }
+            }
+            catch (Exception e)
+            {
+
             }
             return false;
         }
@@ -279,16 +272,17 @@ namespace InterfazTP
         {
             List<Usuario> titulares = new List<Usuario>();
 
-            foreach(Usuario u in usuario)
-            {
-                foreach(CajaDeAhorro c in u.cajas)
+                foreach (CajaDeAhorro c in contexto.cajaAhorro)
                 {
-                    if(c.id == numCaja)
+                    if (c.cbu == numCaja)
                     {
-                        titulares.Add(u);
+                        foreach (Usuario u in c.Titulares)
+                        {
+                            titulares.Add(u);
+                        }
+
                     }
                 }
-            }
 
             return titulares.ToList();
         }
@@ -298,16 +292,14 @@ namespace InterfazTP
         {
             List<Usuario> titulares = new List<Usuario>();
             titulares = MostrarUsuarios();
-            foreach (Usuario u in this.usuario) { 
+            foreach (Usuario u in MostrarUsuarios())
+            {
                 foreach (Usuario ca in usuarios)
                 {
-                    if (u.id==ca.id)
+                    if (u.id_usuario == ca.id_usuario)
                     {
                         titulares.Remove(ca);
                     }
-                    
-                    
-                
                 }
             }
 
@@ -329,10 +321,11 @@ namespace InterfazTP
                         if (c.cbu == numCaja)
                         {
                             t.cajas.Add(c);
-                            c.titular.Add(t);
+                            c.Titulares.Add(t);
+                            contexto.cajaAhorro.Update(c);
+                            contexto.SaveChanges();
                             resultado = true;
 
-                            db.VincularCuentas(numCaja, t.id);
                         }
                     }
                 }
@@ -352,15 +345,16 @@ namespace InterfazTP
                     {
                         if (c.cbu == numCaja)
                         {
-                            if (c.titular.Count == 1)
+                            if (c.Titulares.Count == 1)
                             {
                                 return resultado;
                             }
                             else
                             {
                                 t.cajas.Remove(c);
-                                c.titular.Remove(t);
-                                db.eliminarRelacionCajaYUsuario(numCaja, t.id);
+                                c.Titulares.Remove(t);
+                                contexto.cajaAhorro.Update(c);
+                                contexto.SaveChanges();
                                 resultado = true;
                             }
                         }
@@ -377,7 +371,7 @@ namespace InterfazTP
         // Alta movimiento
         public void AltaMovimiento(CajaDeAhorro c, string detalle, float monto)
         {
-            c.agregarMovimiento(new Movimiento(c, detalle, monto));
+            c.agregarMovimiento(new Movimiento(detalle, monto, DateTime.Now, c));
         }
 
         // Lista de movimientos de caja de ahorro seleccionada por parametro
@@ -387,7 +381,7 @@ namespace InterfazTP
 
             if (usuarioActual != null)
             {
-                foreach (CajaDeAhorro usuarioInd in caja)
+                foreach (CajaDeAhorro usuarioInd in contexto.cajaAhorro)
                 {
                     if (usuarioInd.id == cajas.id)
                     {
@@ -412,27 +406,43 @@ namespace InterfazTP
         // Alta pago
         public void AltaPago(Usuario usuario, string nombre, float monto)
         {
-            Pago p = new Pago(usuario, nombre, monto);
-            pagos.Add(p);
-            usuarioActual.pagos.Add(p);
-
-            db.crearPago(nombre, usuario.id, monto);
+            try
+            {
+                if (usuario != null)
+                {
+                    Pago pago = new Pago(monto, nombre, false);
+                    //usuario.pagos.Add(pago);
+                    usuarioActual.pagos.Add(pago);
+                    contexto.usuarios.Update(usuarioActual);
+                    contexto.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
         // Baja pago
         public bool BajaPago(int id)
         {
-            foreach (var p in usuarioActual.pagos)
+            try
             {
-                if (p.id == id && p.pagado == true)
+                foreach (var p in usuarioActual.pagos)
                 {
-                    pagos.Remove(p);
-                    usuarioActual.pagos.Remove(p);
+                    if (p.id == id && p.pagado == true)
+                    {
+                        contexto.pago.Remove(p);
+                        contexto.SaveChanges();
 
-                    db.eliminarPago(p.id);
-
-                    return true;
+                        return true;
+                    }
                 }
             }
+            catch
+            {
+
+            }
+
             return false;
         }
         // Modificar pago
@@ -448,23 +458,27 @@ namespace InterfazTP
                         {
                             p.pagado = true;
                             c.saldo -= p.monto;
-                            c.agregarMovimiento(new Movimiento(c, "Pago", p.monto));
-                            db.crearMovimiento(c.id, "Pago", p.monto);
-                            db.modificarSaldoDeCaja(c.saldo, c.id);
-                            db.modificarPago(p.id);
+                            c.agregarMovimiento(new Movimiento("Pago", p.monto, DateTime.Now, c));
+
+                            contexto.pago.Update(p);
+                            contexto.cajaAhorro.Update(c);
+                            contexto.SaveChanges();
+
                             return true;
                         }
                     }
 
-                    foreach (TarjetaDeCredito t in tarjetas)
+                    foreach (TarjetaDeCredito t in MostrarTarjetas())
                     {
                         if (t.numero == identificador && (t.limite - t.consumos) >= p.monto)
                         {
                             p.pagado = true;
                             t.consumos += p.monto;
 
-                            db.modificarConsumoDeTarjeta(p.monto, t.id);
-                            db.modificarPago(p.id);
+                            contexto.pago.Update(p);
+                            contexto.tarjetaCredito.Update(t);
+                            contexto.SaveChanges();
+
                             return true;
                         }
                     }
@@ -480,59 +494,77 @@ namespace InterfazTP
         // Alta plazo fijo
         public bool AltaPlazoFijo(Usuario u, float monto, int cbuDestino)
         {
-            foreach (CajaDeAhorro c in caja)
+            DateTime fechaCreacion = DateTime.Now;
+            DateTime fechaFinalizacion = fechaCreacion.AddDays(30);
+
+            foreach (CajaDeAhorro c in MostrarCajasDeAhorro())
             {
                 if (c.cbu == cbuDestino && c.saldo >= monto && monto >= 1000)
                 {
-                    PlazoFijo pfj = new PlazoFijo(u, monto);
+                    PlazoFijo pfj = new PlazoFijo(monto, fechaCreacion, fechaFinalizacion, 60, false);
                     usuarioActual.pf.Add(pfj);
-                    plazosFijos.Add(pfj);
+                    contexto.usuarios.Update(usuarioActual);
+                    contexto.plazoFijo.Add(pfj);
                     c.saldo -= pfj.monto;
-                    c.agregarMovimiento(new Movimiento(c, "Plazo Fijo", monto));
-                    movimientos.Add(new Movimiento(c, "Plazo Fijo", monto));
+                    c.agregarMovimiento(new Movimiento("Plazo Fijo", monto, DateTime.Now, c));
+                    contexto.cajaAhorro.Update(c);
+                    contexto.SaveChanges();
 
-                    db.crearMovimiento(c.id, "Plazo fijo", monto);
-                    db.modificarSaldoDeCaja(c.saldo, c.id);
-                    int idPlazoFijo = db.crearPlazo(u.id, monto);
-                    pfj.id = idPlazoFijo;
+                    // pfj.id = idPlazoFijo;
                     return true;
                 }
             }
             return false;
         }
+
         // Baja plazo fijo
         public bool BajaPlazoFijo(int id)
         {
-            foreach (var p in plazosFijos)
+            foreach (var p in MostrarPlazoFijos())
             {
                 if (p.id == id)
                 {
                     if (p.pagado == true && (DateTime.Now - p.fechaFin).TotalDays > 30)
                     {
                         usuarioActual.pf.Remove(p);
-                        plazosFijos.Remove(p);
+                        contexto.usuarios.Update(usuarioActual);
+                        contexto.SaveChanges();
 
-                        db.modificarfinalizarPlazoFijo(id);
                         return true;
                     }
                 }
             }
             return false;
         }
+
         // Interfaz
         public void cobrarPlazoFijo(int plazoFijoID)
         {
-            foreach (PlazoFijo pf in plazosFijos)
+            foreach (PlazoFijo pf in MostrarPlazoFijos())
             {
                 if (pf.id == plazoFijoID)
                 {
                     usuarioActual.cajas.First().saldo = pf.monto + (pf.monto * (pf.getTasa() / 365));
                     pf.pagado = true;
+                    contexto.plazoFijo.Update(pf);
+                    contexto.SaveChanges();
 
-                    db.modificarfinalizarPlazoFijo(plazoFijoID);
                 }
             }
         }
+
+        // Cobrar plazos fijos si se cumplio la fecha
+        private void OBSPLazosFijos()
+        {
+            foreach (PlazoFijo p in MostrarPlazoFijos())
+            {
+                if (DateTime.Now >= p.fechaFin && p.pagado != true)
+                {
+                    cobrarPlazoFijo(p.id);
+                }
+            }
+        }
+
         ////////////////////////////////////////////////////////////////////////////
 
 
@@ -541,33 +573,28 @@ namespace InterfazTP
         // Alta tarjeta de credito
         public void AltaTarjetaCredito()
         {
-            var rand = new Random();
+            TarjetaDeCredito evenNumQuery = contexto.tarjetaCredito.OrderByDescending(t => t.id).FirstOrDefault();
+            int nuevoCbu = 0;
+            if (evenNumQuery != null)
+            {
+                nuevoCbu = evenNumQuery.id;
+            }
 
-            TarjetaDeCredito t = new TarjetaDeCredito(usuarioActual);
-            t.numero = rand.Next(10000000, 99999999);
-            t.codigoV = rand.Next(100, 999);
-            t.consumos = 0;
-            t.limite = 100000;
-            
-            // Bd
-            int idTarjetaCredito = db.crearTarjeta(usuarioActual.id, t.numero, t.codigoV);
-
-            t.id = idTarjetaCredito;
-            tarjetas.Add(t);
+            TarjetaDeCredito t = new TarjetaDeCredito((int.Parse("80000".ToString() + nuevoCbu.ToString()) + 1), (nuevoCbu + 1), 200000, 0);
             usuarioActual.tarjetas.Add(t);
+            contexto.usuarios.Update(usuarioActual);
+            contexto.SaveChanges();
 
         }
         // Baja tarjeta de credito
         public bool BajaTarjetaCredito(int numero_tarjeta)
         {
-            foreach (TarjetaDeCredito t in usuarioActual.tarjetas)
+            foreach (TarjetaDeCredito t in MostrarTarjetas())
             {
                 if (t.id == numero_tarjeta && t.consumos == 0)
                 {
-                    tarjetas.Remove(t);
-                    usuarioActual.tarjetas.Remove(t);
-
-                    db.eliminarTarjetaCredito(t.id);
+                    contexto.tarjetaCredito.Remove(t);
+                    contexto.SaveChanges();
                     return true;
                 }
             }
@@ -576,21 +603,22 @@ namespace InterfazTP
 
         public bool pagarTarjeta(int tarjeta, int cbu)
         {
-            foreach (TarjetaDeCredito t in tarjetas)
+            foreach (TarjetaDeCredito t in MostrarTarjetas())
             {
                 if (t.id == tarjeta)
                 {
-                    foreach (CajaDeAhorro c in caja)
+                    foreach (CajaDeAhorro c in MostrarTodasLasCajas())
                     {
                         if (t.consumos <= c.saldo)
                         {
+                            AltaMovimiento(c, "Pago Tarjeta", t.consumos);
                             c.saldo -= t.consumos;
                             t.limite += t.consumos;
                             t.consumos = 0;
-                            c.movimientos.Add(new Movimiento(c, "Pago Tarjeta", t.consumos));
+                            contexto.cajaAhorro.Update(c);
+                            contexto.tarjetaCredito.Update(t);
+                            contexto.SaveChanges();
 
-                            db.crearMovimiento(c.id, "Pago de tarjeta" + t.id, t.consumos);
-                            db.modificarSaldoDeCaja(c.saldo, c.id);
                             return true;
                         }
                     }
@@ -607,7 +635,7 @@ namespace InterfazTP
             bool encontrado = false;
             try
             {
-                foreach (Usuario usuarioInd in this.usuario)
+                foreach (Usuario usuarioInd in MostrarUsuarios())
                 {
 
                     if (usuarioInd.usuario == usuario)
@@ -628,8 +656,9 @@ namespace InterfazTP
 
                                 if (usuarioInd.intentosFallidos == 4)
                                 {
-
                                     usuarioInd.bloqueado = true;
+                                    contexto.usuarios.Update(usuarioInd);
+                                    contexto.SaveChanges();
                                 }
 
                             }
@@ -665,19 +694,28 @@ namespace InterfazTP
             admin.password = password;
             admin.administrador = true;
 
-            usuario.Add(admin);
         }
 
         public void desbloquearUsuario(int usuarioId)
         {
-            foreach (Usuario u in usuario)
+            try
             {
-                if (usuarioId == u.id && u.bloqueado == true)
+                foreach (Usuario u in MostrarUsuarios())
                 {
-                    u.bloqueado = false;
-                    db.Modificarbloqueo(usuarioId);
+                    if (usuarioId == u.id_usuario && u.bloqueado == true)
+                    {
+                        u.bloqueado = false;
+                        u.intentosFallidos = 0;
+                        contexto.usuarios.Update(u);
+                        contexto.SaveChanges();
+                    }
                 }
             }
+            catch(Exception i)
+            {
+                MessageBox.Show(i + "");
+            }
+
         }
         ///////////////////////////////////////////////////////////////////////
 
@@ -693,47 +731,48 @@ namespace InterfazTP
         // Lista de todas las cajas de ahorro del banco
         public List<CajaDeAhorro> MostrarTodasLasCajas()
         {
-            return caja.ToList();
+            return contexto.cajaAhorro.ToList();
         }
 
         // Lista de los movimientos de la caja de ahorro que se busca por id(parametro)
         public List<Movimiento> MostrarMovimientos(int cajaID)
         {
+            List<Movimiento> movimientos = new List<Movimiento>();
             if (usuarioActual != null)
             {
-                foreach (CajaDeAhorro c in usuarioActual.cajas)
+                foreach (CajaDeAhorro c in MostrarTodasLasCajas())
                 {
                     if (cajaID == c.id)
                     {
-                        return c.movimientos.ToList();
+                      movimientos = c.movimientos.ToList();
                     }
                 }
             }
-            return null;
+            return movimientos;
         }
 
         // Lista de todos los pagos del usuario logueado
         public List<Pago> MostrarPagos()
         {
-            return usuarioActual.pagos.ToList();
+            return contexto.pago.ToList();
         }
 
         // Muestra todos los plazos fijos del usuario logueado
         public List<PlazoFijo> MostrarPlazoFijos()
         {
-            return usuarioActual.pf.ToList();
+            return contexto.plazoFijo.ToList();
         }
 
         // Lista de todos los usuarios del banco
         public List<Usuario> MostrarUsuarios()
         {
-            return usuario.ToList();
+            return contexto.usuarios.ToList();
         }
 
         // Lista de todas las tarjetas de credito del banco
         public List<TarjetaDeCredito> MostrarTarjetas()
         {
-            return tarjetas.ToList();
+            return contexto.tarjetaCredito.ToList();
         }
 
         ///////////////////////////////////////////////////////////////////////
@@ -743,7 +782,7 @@ namespace InterfazTP
         public CajaDeAhorro buscarCaja(int id)
         {
             CajaDeAhorro res = null;
-            foreach (CajaDeAhorro c in caja)
+            foreach (CajaDeAhorro c in contexto.cajaAhorro)
             {
                 if (c.id == id)
                 {
@@ -752,7 +791,6 @@ namespace InterfazTP
             }
             return res;
         }
-
 
     }
 }

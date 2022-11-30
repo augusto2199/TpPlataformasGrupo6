@@ -118,7 +118,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             tabPage5 = new System.Windows.Forms.TabPage();
             tabPage5.SuspendLayout();
@@ -150,7 +149,7 @@
             // 
             // mostrarUusuarios
             // 
-            this.mostrarUusuarios.Location = new System.Drawing.Point(535, 29);
+            this.mostrarUusuarios.Location = new System.Drawing.Point(598, 46);
             this.mostrarUusuarios.Margin = new System.Windows.Forms.Padding(2);
             this.mostrarUusuarios.Name = "mostrarUusuarios";
             this.mostrarUusuarios.Size = new System.Drawing.Size(114, 20);
@@ -173,7 +172,7 @@
             this.dataGridView7.RowHeadersWidth = 62;
             this.dataGridView7.RowTemplate.Height = 33;
             this.dataGridView7.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView7.Size = new System.Drawing.Size(491, 243);
+            this.dataGridView7.Size = new System.Drawing.Size(564, 243);
             this.dataGridView7.TabIndex = 0;
             this.dataGridView7.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView7_CellContentClick);
             // 
@@ -430,6 +429,7 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 23);
             this.comboBox4.TabIndex = 7;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -521,7 +521,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(534, 159);
+            this.button5.Location = new System.Drawing.Point(533, 175);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 1;
@@ -537,15 +537,16 @@
             this.Column10,
             this.Column11,
             this.Column12});
-            this.dataGridView3.Location = new System.Drawing.Point(715, 39);
+            this.dataGridView3.Location = new System.Drawing.Point(664, 38);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowHeadersWidth = 62;
             this.dataGridView3.RowTemplate.Height = 25;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(443, 275);
+            this.dataGridView3.Size = new System.Drawing.Size(489, 275);
             this.dataGridView3.TabIndex = 0;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // Column9
             // 
@@ -601,7 +602,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(1039, 266);
+            this.label16.Location = new System.Drawing.Point(1034, 214);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(57, 15);
             this.label16.TabIndex = 9;
@@ -651,7 +652,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(1030, 284);
+            this.button6.Location = new System.Drawing.Point(1030, 243);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 22);
             this.button6.TabIndex = 3;
@@ -1031,23 +1032,11 @@
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(599, 7);
-            this.button17.Margin = new System.Windows.Forms.Padding(2);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(128, 41);
-            this.button17.TabIndex = 7;
-            this.button17.Text = "Probar lo de la solapa Usuario";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1231, 482);
-            this.Controls.Add(this.button17);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button12);
@@ -1155,7 +1144,6 @@
         private DataGridViewTextBoxColumn Column14;
         private DataGridViewTextBoxColumn Column15;
         private DataGridViewTextBoxColumn Column16;
-		private Button button17;
 		private TabPage tabPage5;
 		private DataGridView dataGridView7;
 		private System.ComponentModel.BackgroundWorker backgroundWorker1;

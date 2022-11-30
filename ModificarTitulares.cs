@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InterfazTP.Data;
 
 namespace InterfazTP
 {
@@ -98,7 +99,10 @@ namespace InterfazTP
 
             for (int i = 0; i < titulares.Count; i++)
             {
-                dataGridView1.Rows.Add(titulares[i].nombre, titulares[i].apellido, titulares[i].dni);
+                if(titulares[i].administrador == false)
+                {
+                    dataGridView1.Rows.Add(titulares[i].nombre, titulares[i].apellido, titulares[i].dni);
+                }
             }
         }
 
@@ -112,7 +116,11 @@ namespace InterfazTP
 
             for (int i = 0; i < titulares.Count; i++)
             {
-                dataGridView2.Rows.Add(titulares[i].nombre, titulares[i].apellido, titulares[i].dni);
+                if (titulares[i].administrador == false)
+                {
+                    dataGridView2.Rows.Add(titulares[i].nombre, titulares[i].apellido, titulares[i].dni);
+                }
+
             }
         }
 
@@ -131,6 +139,11 @@ namespace InterfazTP
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void ModificarTitulares_Load(object sender, EventArgs e)
         {
 
         }

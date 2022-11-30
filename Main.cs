@@ -9,6 +9,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InterfazTP.Data;
 
 namespace InterfazTP
 {
@@ -34,7 +35,6 @@ namespace InterfazTP
             this.banco = banco;
             refreshDataCbu();
             refreshDataPlazoFijo();
-            OBSPLazosFijos();
             refreshUsuarios();
             refreshDataPagos();
             refreshDataTarjetasDeCredito();
@@ -51,7 +51,6 @@ namespace InterfazTP
             refreshDataCajaDeAhorro();
             refreshDataCbu();
             refreshDataPlazoFijo();
-            OBSPLazosFijos();
             refreshUsuarios();
             refreshDataPagos();
             refreshDataTarjetasDeCredito();
@@ -269,18 +268,6 @@ namespace InterfazTP
             }
         }
 
-        // Cobrar plazos fijos si se cumplio la fecha
-        private void OBSPLazosFijos()
-        {
-            foreach(PlazoFijo p in banco.usuarioActual.pf)
-            {
-                if (DateTime.Now >= p.fechaFin && p.pagado !=true)
-                {
-                    banco.cobrarPlazoFijo(p.id);
-                }
-            }
-        }
-
         // Seleccionador de Plazo Fijo
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -294,6 +281,7 @@ namespace InterfazTP
             {
                 MessageBox.Show("Se creo tu plazo fijo");
                 refreshDataPlazoFijo();
+                refreshDataCajaDeAhorro();
             }
             else
             {
@@ -441,6 +429,7 @@ namespace InterfazTP
             {
                 MessageBox.Show("Se efectuo el pago correctamente");
                 refreshDataTarjetasDeCredito();
+                refreshDataCajaDeAhorro();
             }
             else
             {
@@ -537,10 +526,7 @@ namespace InterfazTP
 
 		private void button17_Click(object sender, EventArgs e)
 		{
-            // Todo lo que quieras lo probás acá.
-            // Es algo dentro de tabControl1, ya que este es el
-            // objeto que contiene la pestaña que queremos ocultar.
-            tabControl1.TabPages.RemoveAt(4);
+
         }
 
         private void dataGridView7_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -560,9 +546,10 @@ namespace InterfazTP
         }
         private void refreshUsuarios()
         {
-            dataGridView7.Rows.Clear();
             if (banco.usuarioActual.administrador)
             {
+                tabPage5.Show();
+                dataGridView7.Rows.Clear();
                 foreach (Usuario u in banco.MostrarUsuarios())
                 {
                     dataGridView7.Rows.Add(u.toArray());
@@ -588,6 +575,21 @@ namespace InterfazTP
         }
 
         private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button17_Click_1(object sender, EventArgs e)
         {
 
         }

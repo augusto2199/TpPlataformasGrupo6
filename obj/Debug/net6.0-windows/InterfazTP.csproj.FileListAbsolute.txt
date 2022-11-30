@@ -320,3 +320,277 @@ C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\r
 C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\InterfazTP.pdb
 C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\InterfazTP.genruntimeconfig.cache
 C:\Users\kevin\Desktop\Homebanking\TpPlataformasv.2.8\obj\Debug\net6.0-windows\ref\InterfazTP.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.csproj.AssemblyReference.cache
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.Form1.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.Login.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.Main.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.ModificarDatosUsuario.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.ModificarTitulares.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.Properties.Resources.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.Registrar.resources
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.csproj.GenerateResource.cache
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfoInputs.cache
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfo.cs
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.csproj.CoreCompileInputs.cache
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\refint\InterfazTP.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\InterfazTP.exe
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\InterfazTP.deps.json
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\InterfazTP.runtimeconfig.json
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Azure.Core.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Azure.Identity.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Humanizer.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Mono.TextTemplating.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\System.Memory.Data.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\System.Text.Json.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.csproj.CopyComplete
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.genruntimeconfig.cache
+C:\Users\Nicolas\OneDrive\Desktop\Entrega Plataforma de desarrollo\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\ref\InterfazTP.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\InterfazTP.exe
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\InterfazTP.deps.json
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\InterfazTP.runtimeconfig.json
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Azure.Core.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Azure.Identity.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Humanizer.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\Mono.TextTemplating.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\System.Memory.Data.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\System.Text.Json.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.csproj.AssemblyReference.cache
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.Form1.resources
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.Login.resources
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.Main.resources
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.ModificarDatosUsuario.resources
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.ModificarTitulares.resources
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.Properties.Resources.resources
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.Registrar.resources
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.csproj.GenerateResource.cache
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfoInputs.cache
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfo.cs
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.csproj.CoreCompileInputs.cache
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.csproj.CopyComplete
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\refint\InterfazTP.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\InterfazTP.genruntimeconfig.cache
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformasGrupo6-main\obj\Debug\net6.0-windows\ref\InterfazTP.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\InterfazTP.exe
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\InterfazTP.deps.json
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\InterfazTP.runtimeconfig.json
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Azure.Core.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Azure.Identity.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Humanizer.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\Mono.TextTemplating.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\System.Memory.Data.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\System.Text.Json.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\obj\Debug\net6.0-windows\InterfazTP.csproj.AssemblyReference.cache
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\obj\Debug\net6.0-windows\InterfazTP.Form1.resources
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\obj\Debug\net6.0-windows\InterfazTP.Login.resources
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\obj\Debug\net6.0-windows\InterfazTP.Main.resources
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\obj\Debug\net6.0-windows\InterfazTP.ModificarDatosUsuario.resources
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\obj\Debug\net6.0-windows\InterfazTP.ModificarTitulares.resources
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\obj\Debug\net6.0-windows\InterfazTP.Properties.Resources.resources
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\obj\Debug\net6.0-windows\InterfazTP.Registrar.resources
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\obj\Debug\net6.0-windows\InterfazTP.csproj.GenerateResource.cache
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\obj\Debug\net6.0-windows\InterfazTP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfoInputs.cache
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfo.cs
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\obj\Debug\net6.0-windows\InterfazTP.csproj.CoreCompileInputs.cache
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\obj\Debug\net6.0-windows\InterfazTP.csproj.CopyComplete
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\obj\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\obj\Debug\net6.0-windows\refint\InterfazTP.dll
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\obj\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\obj\Debug\net6.0-windows\InterfazTP.genruntimeconfig.cache
+C:\Users\kevin\Desktop\TpPlataformasvEntity (2)\TpPlataformas3.2\obj\Debug\net6.0-windows\ref\InterfazTP.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\InterfazTP.exe
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\InterfazTP.deps.json
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\InterfazTP.runtimeconfig.json
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Azure.Core.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Azure.Identity.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Humanizer.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\Mono.TextTemplating.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\System.Memory.Data.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\System.Text.Json.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\obj\Debug\net6.0-windows\InterfazTP.csproj.AssemblyReference.cache
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\obj\Debug\net6.0-windows\InterfazTP.Form1.resources
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\obj\Debug\net6.0-windows\InterfazTP.Login.resources
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\obj\Debug\net6.0-windows\InterfazTP.Main.resources
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\obj\Debug\net6.0-windows\InterfazTP.ModificarDatosUsuario.resources
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\obj\Debug\net6.0-windows\InterfazTP.ModificarTitulares.resources
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\obj\Debug\net6.0-windows\InterfazTP.Properties.Resources.resources
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\obj\Debug\net6.0-windows\InterfazTP.Registrar.resources
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\obj\Debug\net6.0-windows\InterfazTP.csproj.GenerateResource.cache
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\obj\Debug\net6.0-windows\InterfazTP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfoInputs.cache
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\obj\Debug\net6.0-windows\InterfazTP.AssemblyInfo.cs
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\obj\Debug\net6.0-windows\InterfazTP.csproj.CoreCompileInputs.cache
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\obj\Debug\net6.0-windows\InterfazTP.csproj.CopyComplete
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\obj\Debug\net6.0-windows\InterfazTP.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\obj\Debug\net6.0-windows\refint\InterfazTP.dll
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\obj\Debug\net6.0-windows\InterfazTP.pdb
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\obj\Debug\net6.0-windows\InterfazTP.genruntimeconfig.cache
+C:\Users\pupik\Desktop\TpPlataformas3.2.7\obj\Debug\net6.0-windows\ref\InterfazTP.dll

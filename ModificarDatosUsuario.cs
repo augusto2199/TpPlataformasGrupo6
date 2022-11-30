@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static InterfazTP.Main;
+using InterfazTP.Data;
 
 namespace InterfazTP
 {
@@ -26,7 +27,7 @@ namespace InterfazTP
         // Boton confirmar modificar datos
         private void button1_Click(object sender, EventArgs e)
         {
-            if (banco.ModificarUsuario(banco.usuarioActual.id, textBox5.Text, textBox6.Text, textBox1.Text, textBox2.Text, textBox4.Text))
+            if (banco.ModificarUsuario(banco.usuarioActual.id_usuario, textBox5.Text, textBox6.Text, textBox1.Text, textBox2.Text, textBox4.Text))
             {
                 MessageBox.Show("Usuario Modificado con exito!");
                 confirmacionModificacion = true;

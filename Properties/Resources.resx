@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="connectionString" xml:space="preserve">
-    <value>Data Source=DESKTOP-VELRJ6B\SQLEXPRESS;Initial Catalog=Banco;Integrated Security=True</value>
+    <value>Data Source=DESKTOP-RA58JVG\SQLEXPRESS;Initial Catalog=Banco;Integrated Security=True;TrustServerCertificate=True</value>
     <comment>Cadena de conexion a la base de datos</comment>
   </data>
 </root>
